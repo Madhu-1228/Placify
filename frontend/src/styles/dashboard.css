@@ -1,0 +1,81 @@
+/* =========================================================
+   PLACIFY - "TERRACOTTA NOIR" Dashboard Styles
+   ========================================================= */
+
+/* Hero Welcome Banner */
+.dashboard-hero {
+  background: linear-gradient(135deg, #321A2E 0%, #54263D 50%, #C65D3A 100%);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.25rem;
+  color: #FFF8F1;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(232, 218, 212, 0.15);
+}
+
+.dashboard-hero h1 {
+  color: #FFF8F1;
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.dashboard-hero p {
+  color: #F7DDD4;
+  font-size: 0.95rem;
+  max-width: 650px;
+}
+
+/* Stat Cards */
+.stat-card-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -0.03em;
+  margin: 0.35rem 0 0.15rem;
+}
+
+.stat-card-label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 550;
+}
+
+/* Timeline Components */
+.timeline-track {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: var(--border-color);
+}
+
+.timeline-node {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.timeline-node::before {
+  content: '';
+  position: absolute;
+  left: -1.85rem;
+  top: 0.25rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 3px solid var(--terracotta-500);
+}
+
+.timeline-node.completed::before {
+  background: var(--terracotta-500);
+  border-color: var(--terracotta-500);
+}

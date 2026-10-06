@@ -1,0 +1,176 @@
+/* =========================================================
+   PLACIFY - "TERRACOTTA NOIR" Design System & Tokens
+   Distinctive Premium Palette: Deep Plum, Terracotta, Warm Coral, Muted Gold, Cream
+   ========================================================= */
+
+@import './layout.css';
+@import './components.css';
+@import './dashboard.css';
+
+:root {
+  /* Core Brand Dark Surfaces */
+  --plum-950: #24151F; /* Dark Plum: deep navigation/dark areas */
+  --plum-900: #321A2E; /* Deep Plum: primary dark brand, sidebar, hero */
+  --plum-800: #42223C;
+  --plum-700: #54263D;
+  --plum-600: #6B324E;
+  --plum-100: #F3E8EE;
+  --plum-50:  #FAF5F8;
+
+  /* Primary Brand Accent - Terracotta */
+  --terracotta-700: #9E3E20;
+  --terracotta-600: #AE4D2C; /* Hover state */
+  --terracotta-500: #C65D3A; /* Core Brand Accent & Primary CTA */
+  --terracotta-400: #D87352;
+  --terracotta-300: #E48D71;
+  --terracotta-100: #F7DDD4;
+  --terracotta-50:  #FDF3EF;
+
+  /* Secondary Accents - Warm Coral & Muted Gold */
+  --warm-coral:     #E9826E;
+  --warm-coral-light:#FDECE8;
+  --muted-gold:     #D4A24C;
+  --muted-gold-dark:#B88835;
+  --muted-gold-light:#FEF6E9;
+
+  /* Warm Neutral Surfaces & Backgrounds */
+  --bg-page:           #FFF8F1; /* Primary Light Content Background (Cream) */
+  --bg-card:           #FFFFFF; /* Warm White Card Surface */
+  --bg-surface:        #FFFFFF;
+  --bg-surface-subtle: #FDF4EC;
+  --bg-surface-hover:  #FBE9DF; /* Soft Peach */
+  --bg-soft-peach:     #FBE9DF; /* Soft Peach Highlight Background */
+  --bg-input:          #FFFFFF;
+
+  /* Borders */
+  --border-color:       #E8DAD4; /* Warm Neutral Border */
+  --border-color-light: #F4EAE6;
+  --border-color-focus: #C65D3A; /* Terracotta Focus */
+  --border-muted-rose:  #E8C5C0;
+
+  /* Semantic Status Colors (Warm Harmonies) */
+  --success-primary: #2E7D56; /* Soft Muted Sage/Green */
+  --success-bg:      #F0F8F3;
+  --success-border:  #C8E6D3;
+
+  --warning-primary: #C07D1E; /* Warm Amber/Gold */
+  --warning-bg:      #FEF9ED;
+  --warning-border:  #FADDAE;
+
+  --info-primary:    #8C4F6E; /* Warm Plum / Mauve Info */
+  --info-bg:         #FAF0F5;
+  --info-border:     #EACEDD;
+
+  --danger-primary:  #BF3B3B; /* Muted Warm Red */
+  --danger-bg:       #FDF2F2;
+  --danger-border:   #F5CCCC;
+
+  /* Legacy Accent Mappings for Theme Harmony */
+  --primary-500: #C65D3A;
+  --primary-600: #AE4D2C;
+  --primary-400: #E9826E;
+  --primary-300: #F3B5A5;
+  --primary-100: #FBE9DF;
+  --primary-50:  #FFF8F1;
+  --accent-cyan: #C65D3A;
+  --accent-emerald: #2E7D56;
+  --accent-amber: #D4A24C;
+  --accent-rose: #BF3B3B;
+  --accent-purple: #6B324E;
+
+  /* Typography */
+  --text-heading:   #292326; /* Charcoal: Primary Headings on Light Surfaces */
+  --text-primary:   #292326;
+  --text-body:      #3F373A; /* Warm Charcoal Body */
+  --text-secondary: #746B6D; /* Warm Gray: Subtitles, Metadata */
+  --text-muted:     #8C8385;
+  --text-inverse:   #FFF8F1; /* Cream Text on Dark Plum */
+
+  /* Status Colors for Applications Pipeline */
+  --status-applied:   #C65D3A;
+  --status-review:    #D4A24C;
+  --status-test:      #8C4F6E;
+  --status-interview: #E9826E;
+  --status-selected:  #2E7D56;
+  --status-rejected:  #BF3B3B;
+
+  /* Warm Refined Shadows */
+  --shadow-sm: 0 1px 3px rgba(41, 35, 38, 0.05), 0 1px 2px rgba(41, 35, 38, 0.03);
+  --shadow-md: 0 4px 10px -2px rgba(50, 26, 46, 0.07), 0 2px 5px -1px rgba(50, 26, 46, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(50, 26, 46, 0.10), 0 4px 8px -2px rgba(50, 26, 46, 0.05);
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px; /* Cards, containers, modals */
+  --radius-full: 9999px;
+
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'Fira Code', 'Consolas', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Typography Utilities */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-heading);
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-primary-brand {
+  color: var(--terracotta-500);
+}
+
+.text-gold {
+  color: var(--muted-gold);
+}
+
+.text-coral {
+  color: var(--warm-coral);
+}
+
+/* Grid System */
+.grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+@media (max-width: 1024px) {
+  .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-cols-2, .grid-cols-3, .grid-cols-4 {
+    grid-template-columns: 1fr;
+  }
+}

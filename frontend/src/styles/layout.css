@@ -1,0 +1,135 @@
+/* =========================================================
+   PLACIFY - "TERRACOTTA NOIR" Layout & Navigation Styles
+   ========================================================= */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+}
+
+/* Deep Plum Signature Sidebar */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #321A2E 0%, #24151F 100%);
+  border-right: 1px solid rgba(232, 218, 212, 0.12);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+  z-index: 100;
+}
+
+.sidebar-header {
+  padding: 1.5rem 1.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid rgba(232, 218, 212, 0.1);
+}
+
+.sidebar-brand {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #FFF8F1; /* Warm Cream */
+  letter-spacing: -0.02em;
+}
+
+.sidebar-brand-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-full);
+  background: rgba(198, 93, 58, 0.25);
+  border: 1px solid rgba(198, 93, 58, 0.45);
+  color: #E9826E;
+  text-transform: uppercase;
+}
+
+.sidebar-nav {
+  flex: 1;
+  padding: 1.25rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  overflow-y: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.95rem;
+  border-radius: var(--radius-sm);
+  color: #C2B6BC; /* Warm muted cream-plum */
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 550;
+  transition: all 0.18s ease;
+  border-left: 3px solid transparent;
+}
+
+.nav-item:hover {
+  background: rgba(255, 248, 241, 0.06);
+  color: #FFF8F1;
+}
+
+/* Terracotta Active Navigation State */
+.nav-item.active {
+  background: rgba(198, 93, 58, 0.22);
+  color: #FFF8F1;
+  font-weight: 700;
+  border-left-color: #C65D3A;
+  box-shadow: inset 0 0 12px rgba(198, 93, 58, 0.12);
+}
+
+.nav-item.active svg {
+  color: #E9826E;
+}
+
+.sidebar-footer {
+  padding: 1.15rem 1.25rem;
+  border-top: 1px solid rgba(232, 218, 212, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Top Navigation Bar */
+.top-navbar {
+  height: 64px;
+  background: rgba(255, 248, 241, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: var(--bg-page);
+}
+
+.page-container {
+  flex: 1;
+  padding: 1.75rem 2rem;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1rem 1.25rem;
+  }
+}

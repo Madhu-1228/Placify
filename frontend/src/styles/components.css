@@ -1,0 +1,242 @@
+/* =========================================================
+   PLACIFY - "TERRACOTTA NOIR" Component Styles
+   ========================================================= */
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.55rem 1.2rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  text-decoration: none;
+  line-height: 1.25;
+}
+
+/* Primary Action - Terracotta */
+.btn-primary {
+  background: var(--terracotta-500);
+  color: #FFFFFF;
+  border: 1px solid var(--terracotta-500);
+  box-shadow: 0 2px 6px rgba(198, 93, 58, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--terracotta-600);
+  border-color: var(--terracotta-600);
+  box-shadow: 0 4px 10px rgba(198, 93, 58, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Secondary Action - Warm Cream & Plum Border */
+.btn-secondary {
+  background: #FFF8F1;
+  color: var(--plum-900);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-soft-peach);
+  border-color: var(--border-muted-rose);
+  color: var(--text-heading);
+}
+
+/* Outline Button */
+.btn-outline {
+  background: transparent;
+  color: var(--terracotta-500);
+  border: 1px solid var(--terracotta-500);
+}
+
+.btn-outline:hover {
+  background: var(--terracotta-50);
+  border-color: var(--terracotta-600);
+}
+
+/* Premium Gold Button */
+.btn-gold, .btn-premium {
+  background: var(--muted-gold);
+  color: #24151F;
+  border: 1px solid var(--muted-gold);
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(212, 162, 76, 0.25);
+}
+
+.btn-gold:hover, .btn-premium:hover {
+  background: var(--muted-gold-dark);
+  border-color: var(--muted-gold-dark);
+  transform: translateY(-1px);
+}
+
+/* Muted Danger Button */
+.btn-danger {
+  background: var(--danger-primary);
+  color: #FFFFFF;
+  border: 1px solid var(--danger-primary);
+}
+
+.btn-danger:hover {
+  background: #9E2D2D;
+  border-color: #9E2D2D;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Premium Warm Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+  border-color: #D8C3BC;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+/* Semantic Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.22rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.badge-applied   { background: var(--terracotta-50); color: var(--terracotta-500); border: 1px solid var(--border-muted-rose); }
+.badge-review    { background: var(--warning-bg); color: var(--warning-primary); border: 1px solid var(--warning-border); }
+.badge-test      { background: var(--info-bg); color: var(--info-primary); border: 1px solid var(--info-border); }
+.badge-interview { background: var(--warm-coral-light); color: var(--terracotta-500); border: 1px solid var(--border-muted-rose); }
+.badge-selected  { background: var(--success-bg); color: var(--success-primary); border: 1px solid var(--success-border); }
+.badge-success   { background: var(--success-bg); color: var(--success-primary); border: 1px solid var(--success-border); }
+.badge-rejected  { background: var(--danger-bg); color: var(--danger-primary); border: 1px solid var(--danger-border); }
+.badge-danger    { background: var(--danger-bg); color: var(--danger-primary); border: 1px solid var(--danger-border); }
+.badge-warning   { background: var(--warning-bg); color: var(--warning-primary); border: 1px solid var(--warning-border); }
+.badge-info      { background: var(--info-bg); color: var(--info-primary); border: 1px solid var(--info-border); }
+.badge-primary   { background: var(--terracotta-50); color: var(--terracotta-500); border: 1px solid var(--border-muted-rose); }
+.badge-neutral   { background: var(--bg-surface-subtle); color: var(--text-secondary); border: 1px solid var(--border-color); }
+
+/* Forms & Inputs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-label {
+  font-size: 0.82rem;
+  font-weight: 650;
+  color: var(--text-heading);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  color: var(--text-heading);
+  font-size: 0.88rem;
+  font-family: inherit;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--terracotta-500);
+  box-shadow: 0 0 0 3px rgba(198, 93, 58, 0.15);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+/* Tables */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.86rem;
+}
+
+.table th {
+  background: var(--bg-surface-subtle);
+  color: var(--plum-900);
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+}
+
+.table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--border-color-light);
+  color: var(--text-body);
+  vertical-align: middle;
+}
+
+.table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.table tbody tr:hover {
+  background: var(--bg-surface-subtle);
+}
+
+/* Spinner */
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--terracotta-500);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

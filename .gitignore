@@ -1,0 +1,19 @@
+# Environment files
+.env
+.env.local
+.env.*.local
+*.env
+
+# Dependencies & Build outputs
+node_modules/
+target/
+dist/
+build/
+.mvn/wrapper/maven-wrapper.jar
+
+# IDE & OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
